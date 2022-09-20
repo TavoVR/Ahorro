@@ -16,23 +16,21 @@ namespace Alcancia
         {
             InitializeComponent();
         }
-        int a = 0, b = 0;
+
+        int progress = 0;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            a = a + 1;
-            label1.Text = a.ToString();
-            if (progressBar1.Value < 100)
-            {
-                progressBar1.Value = progressBar1.Value + 10;
-                label2.Text = progressBar1.Value.ToString();
-            }
-            else
-            {
-                label2.Text = "Carga Completa";
-            }
-            timer1.Start();
+            progress += 1;
 
+            if ( progress >= 100)
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                MessageBox.Show("Carga Completa!!");
+            }
+            pgbProgress.Value = progress;
+            lblProgress.Text = progress + ".0" + "%";
         }
     }
 }

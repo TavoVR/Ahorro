@@ -32,13 +32,15 @@
             this.pgbProgress = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblProgress = new System.Windows.Forms.Label();
+            this.lblAnio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pgbProgress
             // 
-            this.pgbProgress.Location = new System.Drawing.Point(12, 77);
+            this.pgbProgress.BackColor = System.Drawing.Color.White;
+            this.pgbProgress.Location = new System.Drawing.Point(12, 90);
             this.pgbProgress.Name = "pgbProgress";
-            this.pgbProgress.Size = new System.Drawing.Size(322, 23);
+            this.pgbProgress.Size = new System.Drawing.Size(326, 23);
             this.pgbProgress.TabIndex = 0;
             // 
             // timer1
@@ -50,18 +52,30 @@
             // lblProgress
             // 
             this.lblProgress.AutoSize = true;
-            this.lblProgress.Location = new System.Drawing.Point(144, 82);
+            this.lblProgress.BackColor = System.Drawing.Color.Transparent;
+            this.lblProgress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgress.Location = new System.Drawing.Point(146, 92);
             this.lblProgress.Name = "lblProgress";
-            this.lblProgress.Size = new System.Drawing.Size(35, 13);
+            this.lblProgress.Size = new System.Drawing.Size(54, 19);
             this.lblProgress.TabIndex = 1;
             this.lblProgress.Text = "label1";
+            // 
+            // lblAnio
+            // 
+            this.lblAnio.AutoSize = true;
+            this.lblAnio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnio.Location = new System.Drawing.Point(284, 163);
+            this.lblAnio.Name = "lblAnio";
+            this.lblAnio.Size = new System.Drawing.Size(0, 18);
+            this.lblAnio.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(346, 190);
+            this.ClientSize = new System.Drawing.Size(350, 200);
+            this.Controls.Add(this.lblAnio);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.pgbProgress);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -77,6 +91,7 @@
         private System.Windows.Forms.ProgressBar pgbProgress;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.Label lblAnio;
     }
 }
 

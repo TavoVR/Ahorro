@@ -15,6 +15,7 @@ namespace Alcancia
         public Form1()
         {
             InitializeComponent();
+            lblAnio.Text = DateTime.Today.Year.ToString();
         }
 
         int progress = 0;
@@ -22,15 +23,17 @@ namespace Alcancia
         private void timer1_Tick(object sender, EventArgs e)
         {
             progress += 1;
-
-            if ( progress >= 100)
+            if ( progress > 100)
             {
                 timer1.Enabled = false;
                 timer1.Stop();
-                MessageBox.Show("Carga Completa!!");
+                //MessageBox.Show("Carga Completa!!");
             }
-            pgbProgress.Value = progress;
-            lblProgress.Text = progress + ".0" + "%";
+            else
+            {
+                pgbProgress.Value = progress;
+                lblProgress.Text = progress  + "%";
+            }
         }
     }
 }

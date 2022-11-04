@@ -19,6 +19,8 @@ namespace Alcancia
         }
 
         int progress = 0;
+        string msj = "";
+        Clases.Conexion.conexion conexion = new Clases.Conexion.conexion();
 
         private void timer1_Tick(object sender, EventArgs e)
         {

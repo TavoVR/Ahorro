@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Alcancia.Proyecto;
 
 namespace Alcancia
 {
@@ -29,6 +30,9 @@ namespace Alcancia
             {
                 timer1.Enabled = false;
                 timer1.Stop();
+                Alcancia.Proyecto.Panel p = new Alcancia.Proyecto.Panel();
+                p.ShowDialog();
+                this.Close();
                 //MessageBox.Show("Carga Completa!!");
             }
             else
